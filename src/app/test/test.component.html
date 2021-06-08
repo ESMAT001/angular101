@@ -12,7 +12,15 @@
 <div>
   {{text}}
 </div>
-<div *ngIf="show">
+<div *ngIf="show; else elseBlock">
   TEXT
 </div>
+
+<ng-template #elseBlock>
+  <h2>
+    text is hidden
+  </h2>
+</ng-template>
+
+
 <button (click)="toggleShow()">{{show?"hide":"show"}}</button>
