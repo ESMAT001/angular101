@@ -5,22 +5,34 @@
 <h1 [ngClass]="clsForCom">{{error}}</h1>
 
 <input type="text" #input />
-<button (click)="showValue(input.value)" >btn</button>
+<button (click)="showValue(input.value)">btn</button>
 
 
 <input type='text' [(ngModel)]="text" />
 <div>
   {{text}}
 </div>
-<div *ngIf="show; else elseBlock">
+<!-- <div *ngIf="show; else elseBlock">
   TEXT
-</div>
+</div> -->
 
-<ng-template #elseBlock>
+<!-- <ng-template #elseBlock>
   <h2>
     text is hidden
   </h2>
+</ng-template> -->
+
+
+<div *ngIf="show; then thenBlock; else elseBlock"></div>
+
+<ng-template #thenBlock>
+  <h1>TEXT </h1>
 </ng-template>
+<ng-template #elseBlock>
+  <h2>hidden</h2>
+</ng-template>
+
+
 
 
 <button (click)="toggleShow()">{{show?"hide":"show"}}</button>
