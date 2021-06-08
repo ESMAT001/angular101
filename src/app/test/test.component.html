@@ -12,3 +12,7 @@
 <div>
   {{text}}
 </div>
+<div *ngIf="show">
+  TEXT
+</div>
+<button (click)="toggleShow()">{{show?"hide":"show"}}</button>

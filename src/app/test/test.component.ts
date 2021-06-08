@@ -19,6 +19,7 @@ export class TestComponent implements OnInit {
 
   public text:string='';
 
+  public show:boolean = true;
 
   constructor() { }
 
@@ -31,6 +32,9 @@ export class TestComponent implements OnInit {
   showValue(val:any){
     console.log(val)
 
+  }
+  toggleShow(){
+    this.show=!this.show;
   }
 
 }
