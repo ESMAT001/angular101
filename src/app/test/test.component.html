@@ -31,8 +31,9 @@
 <ng-template #elseBlock>
   <h2>hidden</h2>
 </ng-template>
-
-
-
-
 <button (click)="toggleShow()">{{show?"hide":"show"}}</button>
+
+
+<ul>
+  <li *ngFor="let obj of names;first as f;odd as o">{{f}} {{o}} name: {{obj.name}} id {{obj.id}} </li>
+</ul>

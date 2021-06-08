@@ -13,28 +13,39 @@ export class TestComponent implements OnInit {
   public hasError: boolean = false;
   public clsForCom = {
     "error": !this.hasError,
-    "test":true
+    "test": true
   }
-  public error:boolean=true;
+  public error: boolean = true;
 
-  public text:string='';
+  public text: string = '';
 
-  public show:boolean = true;
+  public show: boolean = true;
+
+  public names: Array<name> = [{ name: 'ahmad', id: 1 }, { name: 'a', id: 2 }, { name: 'b', id: 3 }];
+
 
   constructor() { }
 
   ngOnInit(): void {
   }
-  fn(e:any){
+  fn(e: any) {
     console.log(e);
-    this.error=!this.error;
+    this.error = !this.error;
   }
-  showValue(val:any){
+  showValue(val: any) {
     console.log(val)
 
   }
-  toggleShow(){
-    this.show=!this.show;
+  toggleShow() {
+    this.show = !this.show;
   }
 
 }
+
+interface name{
+  name: string;
+  id:number;
+}
+
+
+
