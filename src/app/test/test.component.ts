@@ -16,6 +16,10 @@ export class TestComponent implements OnInit {
     "test":true
   }
   public error:boolean=true;
+
+  public text:string='';
+
+
   constructor() { }
 
   ngOnInit(): void {
@@ -23,6 +27,10 @@ export class TestComponent implements OnInit {
   fn(e:any){
     console.log(e);
     this.error=!this.error;
+  }
+  showValue(val:any){
+    console.log(val)
+
   }
 
 }

@@ -3,3 +3,12 @@
 <input type="text" [id]='id' />
 <button (click)="fn($event)"> click</button>
 <h1 [ngClass]="clsForCom">{{error}}</h1>
+
+<input type="text" #input />
+<button (click)="showValue(input.value)" >btn</button>
+
+
+<input type='text' [(ngModel)]="text" />
+<div>
+  {{text}}
+</div>
