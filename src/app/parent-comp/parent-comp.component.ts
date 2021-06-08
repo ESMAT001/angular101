@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./parent-comp.component.css']
 })
 export class ParentCompComponent implements OnInit {
-
+  name = 'data';
+  data='';
   constructor() { }
 
   ngOnInit(): void {
+  }
+  changeName(){
+    this.name="changed";
   }
 
 }

@@ -1,1 +1,5 @@
-<p>parent-comp works!</p>
+<p>parent-comp works! {{data}}</p>
+<button (click)="changeName()">change</button>
+<app-child-comp (eventForParent)="data=$event"  [parentData]="name">
+
+</app-child-comp>
