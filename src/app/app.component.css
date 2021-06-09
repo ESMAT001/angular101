@@ -1,0 +1,11 @@
+.nav{
+  display: flex;
+  flex-direction: row;
+}
+.nav-item{
+  margin: 0 4px;
+  font-size: 30px;
+}
+.active{
+  color: red;
+}
